@@ -1,0 +1,10 @@
+<?php
+session_start();
+session_destroy();
+setcookie('remember',$remember,time()-1);
+setcookie('admin_username','',time()-1);
+setcookie('admin_name','',time()-1);
+setcookie('admin_email','',time()-1);
+setcookie('admin_role','',time()-1);		
+header('location:index.php');
+?>
